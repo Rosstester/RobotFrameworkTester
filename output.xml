@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180423 15:34:06.733" generator="Robot 3.0 (Python 2.7.5 on linux2)">
+<suite source="/home/tester/RobotFrameworkTester/robot_selenium_github_login.robot" id="s1" name="Robot Selenium Github Login">
+<test id="s1-t1" name="TC_01 - Try to LogIn to Github.com using valid credentials">
+<kw name="Open Browser And Maximize">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180423 15:34:06.812" level="INFO">Opening browser 'Firefox' to base url 'https://github.com//'</msg>
+<status status="PASS" endtime="20180423 15:34:12.074" starttime="20180423 15:34:06.812"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180423 15:34:12.130" starttime="20180423 15:34:12.075"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20180423 15:34:12.130" starttime="20180423 15:34:12.130"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:34:12.130" starttime="20180423 15:34:06.811"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180423 15:34:17.475" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180423 15:34:17.475" starttime="20180423 15:34:12.130"></status>
+</kw>
+<kw name="Click SignIn Button At Mainsite">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN_MAINSITE_BTN}</arg>
+</arguments>
+<msg timestamp="20180423 15:34:17.476" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<status status="PASS" endtime="20180423 15:34:25.644" starttime="20180423 15:34:17.476"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:34:25.644" starttime="20180423 15:34:17.475"></status>
+</kw>
+<kw name="Wait few seconds">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<msg timestamp="20180423 15:34:29.645" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20180423 15:34:29.646" starttime="20180423 15:34:25.645"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:34:29.646" starttime="20180423 15:34:25.644"></status>
+</kw>
+<kw name="Verify Text Present Login Site">
+<arguments>
+<arg>Sign in to GitHub</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>${ASSERT_TEXT_AT_LOGINSITE}</arg>
+<arg>${text_at_login_site}</arg>
+</arguments>
+<msg timestamp="20180423 15:34:29.647" level="INFO">Verifying element '//h1[contains(.,'Sign in to GitHub')]' contains text 'Sign in to GitHub'.</msg>
+<status status="PASS" endtime="20180423 15:34:37.677" starttime="20180423 15:34:29.646"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:34:37.678" starttime="20180423 15:34:29.646"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180423 15:34:41.769" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180423 15:34:41.770" starttime="20180423 15:34:37.678"></status>
+</kw>
+<kw name="Input Valid UserName">
+<arguments>
+<arg>${VALID_USER}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_FIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180423 15:34:41.771" level="INFO">Typing text 'rosstester' into text field '//*[@id="login_field"]'</msg>
+<status status="PASS" endtime="20180423 15:34:53.850" starttime="20180423 15:34:41.770"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:34:53.850" starttime="20180423 15:34:41.770"></status>
+</kw>
+<kw name="Input Valid Password">
+<arguments>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180423 15:34:53.851" level="INFO">Typing text 'tester123' into text field '//*[@id="password"]'</msg>
+<status status="PASS" endtime="20180423 15:35:05.931" starttime="20180423 15:34:53.851"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:35:05.931" starttime="20180423 15:34:53.850"></status>
+</kw>
+<kw name="Click SignIn Button At LoginSite">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN_LOGINSITE_BTN}</arg>
+</arguments>
+<msg timestamp="20180423 15:35:05.931" level="INFO">Clicking element '//*[@value="Sign in"]'.</msg>
+<status status="PASS" endtime="20180423 15:35:16.402" starttime="20180423 15:35:05.931"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:35:16.402" starttime="20180423 15:35:05.931"></status>
+</kw>
+<kw name="Wait few seconds">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<msg timestamp="20180423 15:35:20.404" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20180423 15:35:20.404" starttime="20180423 15:35:16.403"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:35:20.404" starttime="20180423 15:35:16.403"></status>
+</kw>
+<kw name="Verify Text Present After Correct Login">
+<arguments>
+<arg>Learn Git and GitHub without any code!</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>${ASSERT_TEXT_AFTER_LOGIN}</arg>
+<arg>${text_correct_login}</arg>
+</arguments>
+<msg timestamp="20180423 15:35:20.405" level="INFO">Verifying element '//*[@class="shelf-title"]' contains text 'Learn Git and GitHub without any code!'.</msg>
+<status status="PASS" endtime="20180423 15:35:28.438" starttime="20180423 15:35:20.404"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:35:28.438" starttime="20180423 15:35:20.404"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180423 15:35:32.688" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180423 15:35:32.688" starttime="20180423 15:35:28.438"></status>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180423 15:35:36.707" starttime="20180423 15:35:32.689"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:35:36.708" critical="yes" starttime="20180423 15:34:06.811"></status>
+</test>
+<test id="s1-t2" name="TC_02 - Try to LogIn to Github.com using NOT valid credentials">
+<kw name="Open Browser And Maximize">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180423 15:35:36.709" level="INFO">Opening browser 'Firefox' to base url 'https://github.com//'</msg>
+<status status="PASS" endtime="20180423 15:35:54.148" starttime="20180423 15:35:36.709"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180423 15:35:58.157" starttime="20180423 15:35:54.148"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20180423 15:35:58.158" starttime="20180423 15:35:58.158"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:35:58.158" starttime="20180423 15:35:36.709"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180423 15:36:04.144" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180423 15:36:04.144" starttime="20180423 15:35:58.158"></status>
+</kw>
+<kw name="Click SignIn Button At Mainsite">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN_MAINSITE_BTN}</arg>
+</arguments>
+<msg timestamp="20180423 15:36:04.145" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<status status="PASS" endtime="20180423 15:36:13.364" starttime="20180423 15:36:04.145"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:36:13.365" starttime="20180423 15:36:04.144"></status>
+</kw>
+<kw name="Wait few seconds">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<msg timestamp="20180423 15:36:17.366" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20180423 15:36:17.366" starttime="20180423 15:36:13.365"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:36:17.366" starttime="20180423 15:36:13.365"></status>
+</kw>
+<kw name="Verify Text Present Login Site">
+<arguments>
+<arg>Sign in to GitHub</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>${ASSERT_TEXT_AT_LOGINSITE}</arg>
+<arg>${text_at_login_site}</arg>
+</arguments>
+<msg timestamp="20180423 15:36:17.367" level="INFO">Verifying element '//h1[contains(.,'Sign in to GitHub')]' contains text 'Sign in to GitHub'.</msg>
+<status status="PASS" endtime="20180423 15:36:25.396" starttime="20180423 15:36:17.367"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:36:25.397" starttime="20180423 15:36:17.366"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180423 15:36:29.487" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180423 15:36:29.487" starttime="20180423 15:36:25.397"></status>
+</kw>
+<kw name="Input Valid UserName">
+<arguments>
+<arg>${VALID_USER}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_FIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180423 15:36:29.488" level="INFO">Typing text 'rosstester' into text field '//*[@id="login_field"]'</msg>
+<status status="PASS" endtime="20180423 15:36:41.568" starttime="20180423 15:36:29.488"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:36:41.569" starttime="20180423 15:36:29.488"></status>
+</kw>
+<kw name="Input Not Valid Password">
+<arguments>
+<arg>${NOT_VALID_PASSWORD}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${wrong_password}</arg>
+</arguments>
+<msg timestamp="20180423 15:36:41.570" level="INFO">Typing text 'tester1234' into text field '//*[@id="password"]'</msg>
+<status status="PASS" endtime="20180423 15:36:53.645" starttime="20180423 15:36:41.569"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:36:53.645" starttime="20180423 15:36:41.569"></status>
+</kw>
+<kw name="Click SignIn Button At LoginSite">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN_LOGINSITE_BTN}</arg>
+</arguments>
+<msg timestamp="20180423 15:36:53.646" level="INFO">Clicking element '//*[@value="Sign in"]'.</msg>
+<status status="PASS" endtime="20180423 15:37:02.465" starttime="20180423 15:36:53.645"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:37:02.465" starttime="20180423 15:36:53.645"></status>
+</kw>
+<kw name="Wait few seconds">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<msg timestamp="20180423 15:37:06.466" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20180423 15:37:06.467" starttime="20180423 15:37:02.466"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:37:06.467" starttime="20180423 15:37:02.466"></status>
+</kw>
+<kw name="Verify Wrong Password Alert Present">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>//*[@class='container']</arg>
+</arguments>
+<msg timestamp="20180423 15:37:06.468" level="INFO">Verifying element '//*[@class='container']' is visible.</msg>
+<status status="PASS" endtime="20180423 15:37:14.499" starttime="20180423 15:37:06.467"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:37:14.499" starttime="20180423 15:37:06.467"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180423 15:37:18.589" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180423 15:37:18.589" starttime="20180423 15:37:14.500"></status>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180423 15:37:22.608" starttime="20180423 15:37:18.590"></status>
+</kw>
+<status status="PASS" endtime="20180423 15:37:22.609" critical="yes" starttime="20180423 15:35:36.708"></status>
+</test>
+<status status="PASS" endtime="20180423 15:37:22.610" starttime="20180423 15:34:06.734"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Robot Selenium Github Login" pass="2">Robot Selenium Github Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
