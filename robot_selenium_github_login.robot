@@ -5,7 +5,7 @@ Library    Selenium2Library
 ${SERVER}    github.com/
 ${BROWSER}    Firefox
 ${DELAY}    4
-${VALID_USER}    rosstester
+${VALID_USER}    just-for-test-login
 ${VALID_PASSWORD}    tester123
 ${NOT_VALID_PASSWORD}    tester1234
 ${LOGIN_URL}    https://${SERVER}/
